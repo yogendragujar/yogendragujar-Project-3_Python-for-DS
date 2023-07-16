@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        h2 {
+            margin-left: 3%;
+            padding: 2%;
+        }
+
+        #headStyle {
+            display: flex;
+            margin-left: 42%;
+            width: fit-content;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            row-gap: 15px;
+            padding: 2%;
+        }
+
+        #formbox{
+            margin-left: 30%;
+            margin-right: 30%;
+            margin-top: 12%;
+            margin-bottom: 8%;
+            box-shadow: -4px 10px 5px 0px rgba(102, 147, 206, 0.75);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formbox">
+        <h2>Please login/signup to check loan eligibility</h2>
+        <div id="headStyle">
+            <a class="btn btn-success" role="button" href="{{ url_for('login') }}">Login Now</a>
+            <a class="btn btn-success" role="button" href="{{ url_for('register') }}">Register Now</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
