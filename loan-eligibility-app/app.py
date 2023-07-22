@@ -96,7 +96,6 @@ def predict():
     property_area = int(request.form['property-area'])
 
     total_income = applicantincome + coapplicantincome
-    # loanamount = scaler.fit_transform(iloanamount.reshape(-1, 1))
     # loanamount = scaler.fit_transform(np.array(iloanamount).reshape(1,-1))
     # total_income = scaler.fit_transform(np.array(itotal_income).reshape(1,-1))
     # loan_amount_term = scaler.fit_transform(np.array(iloan_amount_term).reshape(1,-1))
@@ -113,7 +112,7 @@ def predict():
     output = prediction[0]
     print(prediction)
     print(output)
-    if output == 1:
+    if output == 0:
         return render_template('predict.html', prediction_text="Congrats!! You are eligible for the loan")
     else:
         return render_template('predict.html', prediction_text="Sorry, You are Not eligible for the loan")
